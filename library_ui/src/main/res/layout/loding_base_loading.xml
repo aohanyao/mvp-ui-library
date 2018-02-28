@@ -17,8 +17,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:visibility="visible"
-        app:indicator="LineScale"
-        app:indicator_color="#03a4f9"/>
+        app:indicatorName="LineScale"
+        app:indicatorColor="#03a4f9"/>
 
     <TextView
         android:layout_width="wrap_content"

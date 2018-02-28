@@ -19,8 +19,8 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:visibility="visible"
-            app:indicator="BallSpinFadeLoader"
-            app:indicator_color="#03a4f9"/>
+            app:indicatorName="BallSpinFadeLoader"
+            app:indicatorColor="#03a4f9"/>
 
         <TextView
             android:id="@+id/loading_text"

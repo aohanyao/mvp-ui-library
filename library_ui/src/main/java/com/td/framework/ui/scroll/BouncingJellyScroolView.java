@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ScrollView;
 
-import com.nineoldandroids.view.ViewHelper;
 import com.td.framework.utils.ScreenUtils;
 
 import java.security.SecureRandom;
@@ -74,10 +73,11 @@ public class BouncingJellyScroolView extends ScrollView {
      */
     public void bouncingTo() {
         float bouncingJelly = 1.0f + v;
-        ViewHelper.setPivotX(childAt, getWidth() / 2);
-        ViewHelper.setPivotY(childAt, 0);
+        childAt.setPivotX(getWidth() / 2);
+        childAt.setPivotY(0);
+
         if (isBouncingJelly)
-            ViewHelper.setScaleY(childAt, 1.0f + v);
+            childAt.setScaleY(1.0f + bouncingJelly);
         if (onBouncingJellyListener != null) {
             onBouncingJellyListener.onBouncingJellyTop(bouncingJelly);
         }
@@ -89,10 +89,11 @@ public class BouncingJellyScroolView extends ScrollView {
      */
     public void bouncingBottom() {
         float bouncingJelly = 1.0f + v;
-        ViewHelper.setPivotX(childAt, getWidth() / 2);
-        ViewHelper.setPivotY(childAt, childAt.getHeight());
+        childAt.setPivotX(getWidth() / 2);
+        childAt.setPivotY(childAt.getHeight());
         if (isBouncingJelly)
-            ViewHelper.setScaleY(childAt, bouncingJelly);
+            childAt.setScaleY(1.0f + bouncingJelly);
+
         if (onBouncingJellyListener != null) {
             onBouncingJellyListener.onBouncingJellyBottom(bouncingJelly);
         }
@@ -164,7 +165,7 @@ public class BouncingJellyScroolView extends ScrollView {
         return super.onTouchEvent(ev);
     }
 
-    private void back() {
+    protected void back() {
         if (animator != null && animator.isRunning()) {
             animator.cancel();
             animator = null;

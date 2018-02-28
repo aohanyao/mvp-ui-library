@@ -58,7 +58,6 @@ public class RotateUpPageTransformer extends BasePageTransformer
         } else
         { // (1,+Infinity]
             // This page is way off-screen to the right.
-//            ViewHelper.setRotation(view, ROT_MAX);
             view.setRotation(-mMaxRotate);
             view.setPivotX(0);
             view.setPivotY(0);
