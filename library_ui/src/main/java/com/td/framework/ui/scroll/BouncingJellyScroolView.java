@@ -77,7 +77,7 @@ public class BouncingJellyScroolView extends ScrollView {
         childAt.setPivotY(0);
 
         if (isBouncingJelly)
-            childAt.setScaleY(1.0f + bouncingJelly);
+            childAt.setScaleY(bouncingJelly);
         if (onBouncingJellyListener != null) {
             onBouncingJellyListener.onBouncingJellyTop(bouncingJelly);
         }
@@ -92,7 +92,7 @@ public class BouncingJellyScroolView extends ScrollView {
         childAt.setPivotX(getWidth() / 2);
         childAt.setPivotY(childAt.getHeight());
         if (isBouncingJelly)
-            childAt.setScaleY(1.0f + bouncingJelly);
+            childAt.setScaleY(bouncingJelly);
 
         if (onBouncingJellyListener != null) {
             onBouncingJellyListener.onBouncingJellyBottom(bouncingJelly);
