@@ -2,8 +2,6 @@ package com.td.framework.utils.cache;
 
 import android.content.Context;
 
-import com.td.framework.utils.L;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -32,7 +30,6 @@ public class SerializableUtil<T> {
      */
     public boolean saveSerializableObject(T serializable, String fileName) {
         File file = new File(mContext.getFilesDir().getAbsoluteFile() + File.separator + fileName);
-        L.e("保存成功："+file.getAbsolutePath());
         return saveSerializableObject(serializable, file);
     }
 
@@ -58,8 +55,7 @@ public class SerializableUtil<T> {
             objectOutputStream.writeObject(serializable);
             return true;
         } catch (IOException e) {
-            if (L.isDebug)
-                e.printStackTrace();
+            e.printStackTrace();
             return false;
         }
     }

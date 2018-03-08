@@ -1,16 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 android {
-    compileSdkVersion 26
-
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
 
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 26
-        versionCode 104
-        versionName "v0.4alpha"
-
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode 105
+        versionName "v0.5alpha"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -43,7 +41,7 @@ tasks.withType(JavaCompile) {
 }
 
 task javadoc(type: Javadoc) {
-    failOnError  false
+    failOnError false
     source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     classpath += configurations.compile
@@ -64,13 +62,26 @@ artifacts {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies["design"]
-    compile rootProject.ext.dependencies["BaseAdapter"]
-    compile rootProject.ext.dependencies["avi-loading"]
-    compile rootProject.ext.dependencies["ByeBurger"]
     compile rootProject.ext.dependencies["recyclerview-v7"]
     compile rootProject.ext.dependencies["cardview-v7"]
+    /**loading view*/
+    compile rootProject.ext.dependencies["avi-loading"]
+    /**recycleView适配器*/
+    compile rootProject.ext.dependencies["BaseAdapter"]
+    /**滑动隐藏*/
+    compile rootProject.ext.dependencies["ByeBurger"]
+    /**日志*/
     compile rootProject.ext.dependencies["logger"]
+    /**拼音转换*/
     compile rootProject.ext.dependencies["tinypinyin"]
+    /**指示器*/
+    compile rootProject.ext.dependencies["circleindicator"]
+    /**banner*/
+    compile(rootProject.ext.dependencies["convenientbanner"]) {
+        exclude group: 'com.android.support'
+    }
+    /**富文本*/
+    compile rootProject.ext.dependencies["richtext"]
 
 
 }

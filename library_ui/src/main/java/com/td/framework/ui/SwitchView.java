@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.td.framework.utils.DensityUtils;
-import com.td.framework.utils.L;
 import com.td.framework.utils.MeasureSpecUtisl;
 import com.yida.cloud.ui.R;
 
@@ -196,7 +195,6 @@ public class SwitchView extends View implements View.OnClickListener {
         }*/ else {
             //关闭
             mOnRectf = new RectF(width - valueWidth, 0, mWidth - valueWidth, mHeight);
-            L.e(mOnRectf.toShortString());
             mPaint.setColor(mOffBackgroundColor);
             if (aminValueHundred >= 0.5 && !isExchangeColor) {
                 mTempTextColor = onTextColor;

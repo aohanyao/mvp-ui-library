@@ -4,8 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
-import com.td.framework.utils.L;
-
 /**
  * Created by jc on 2016/2/22.
  * <p>自定义控件</p>
@@ -40,7 +38,6 @@ public class KeyBosLinearLayout extends LinearLayout {
 
         if (null != listener) {
             if (oldh > 0) {
-                L.e("布局更改：w：" + w + "      h:" + h + "       oldw:" + oldw + "       oldh:" + oldh);
                 if (h < oldh && oldh - h > 100) {
                     listener.onKeyboardChange(true, oldh - h);
                 } else if (h > oldh && h - oldh > 100) {//关闭
