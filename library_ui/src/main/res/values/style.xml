@@ -13,29 +13,7 @@
 
     </style>
 
-    <style name="mToolbarNavigationButtonStyle" parent="Widget.AppCompat.Toolbar.Button.Navigation">
-        <item name="android:minWidth">0dp</item>
-    </style>
 
-    <!--标题栏的样式-->
-    <style name="BaseToolbarStyle" parent="Widget.AppCompat.Toolbar">
-        <!--内容距离开始 边距-->
-        <item name="contentInsetStart">4dp</item>
-        <!--内容距离 导航按钮 边距-->
-        <item name="contentInsetStartWithNavigation">4dp</item>
-        <!--使自定义view可以贴左右的边，多数版本的系统不要下面两句也可以，但少量版本必须加下面的两句-->
-        <item name="android:paddingLeft">@dimen/toolbar_left_margin</item>
-        <!--右内边距-->
-        <item name="android:paddingRight">0dp</item>
-        <!--最小高度-->
-        <item name="android:minHeight">@dimen/toolbar_height</item>
-        <!--高度-->
-        <item name="android:layout_height">@dimen/toolbar_height</item>
-        <!--id-->
-        <item name="android:id">@id/base_toolbar</item>
-        <!--宽度-->
-        <item name="android:layout_width">match_parent</item>
-    </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -44,31 +22,35 @@
 
 
     <style name="TranThem" parent="AppTheme.ToolbarHeight">
+        <!--透明样式-->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowBackground">@color/trans_t</item>
     </style>
 
     <style name="AppBarLayoutStyle">
+        <!--标题栏样式-->
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_height">@dimen/AppBarLayoutHeight</item>
         <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
         <!--这里设置 标题栏的颜色-->
         <item name="android:id">@id/app_bar_layout</item>
     </style>
 
     <style name="ToolBarNavTextStyle">
+        <!--标题栏返回文字样式-->
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">44dp</item>
-        <item name="android:layout_marginLeft">22dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/ToolbarNavTextMarginLeft</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/ToolbarNavTextColor</item>
+        <item name="android:textSize">@dimen/ToolbarNavTextSize</item>
         <item name="android:id">@id/toolbar_nav_text</item>
     </style>
 
     <style name="ToolBarRightActionStyle" parent="ToolBarTitleStyle">
+        <!--标题栏 右边Action文字样式-->
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">right</item>
         <item name="android:gravity">center</item>
@@ -79,17 +61,22 @@
     </style>
 
     <style name="ToolBarNavTextStyle.Not">
+        <!--标题栏返回按钮没有样式-->
         <item name="android:layout_height">?actionBarSize</item>
         <item name="android:layout_marginLeft">36dp</item>
     </style>
 
     <style name="ToolBarStyle">
+        <!--标题栏样式-->
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_height">@dimen/AppBarLayoutHeight</item>
         <item name="android:background">?attr/colorPrimary</item>
     </style>
 
     <style name="AppTheme.ToolbarHeight">
+        <!--修改了标题栏默认样式的样式
+        修改了返回按钮的边距
+        -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="toolbarNavigationButtonStyle">@style/mToolbarNavigationButtonStyle</item>
@@ -98,21 +85,11 @@
     </style>
 
     <style name="AppTheme.NotToolbarHeight">
+        <!--不更改标题栏的默认样式-->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="MainStyle" parent="AppTheme.ToolbarHeight">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorAccent">@color/white</item>
-    </style>
-
-    <style name="DialogTextStyle" parent="AppTheme.ToolbarHeight">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="colorAccent">@color/white</item>
-    </style>
 
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -121,6 +98,7 @@
 
 
     <style name="DialogCallActionStyle">
+        <!--弹窗-->
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48dp</item>
         <item name="android:layout_alignParentBottom">true</item>
@@ -153,12 +131,13 @@
     </style>
 
     <style name="ToolBarTitleStyle">
+        <!--标题栏 标题样式-->
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/toolbar_title_color</item>
+        <item name="android:textColor">@color/ToolbarTitleTextColor</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:background">@null</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/ToolbarTitleTextSize</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:id">@id/tv_toolbar_title</item>
     </style>
