@@ -20,7 +20,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.yida.cloud.ui.R;
+import com.td.framework.ui.R;
 
 import java.util.List;
 
@@ -28,6 +28,7 @@ import java.util.List;
  * http://blog.csdn.net/lmj623565791/article/details/42160391
  *
  * @author zhy
+ * 三角形Tab指示器
  */
 public class ViewPagerIndicator extends LinearLayout {
     /**

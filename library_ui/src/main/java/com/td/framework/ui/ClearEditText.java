@@ -16,7 +16,6 @@ import android.view.animation.TranslateAnimation;
 
 import com.td.framework.utils.DensityUtils;
 import com.td.framework.utils.KeyBoardUtils;
-import com.yida.cloud.ui.R;
 
 /**
  * 自带清除按钮的输入框

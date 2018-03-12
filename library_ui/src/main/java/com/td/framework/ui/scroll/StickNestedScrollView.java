@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
-import com.yida.cloud.ui.R;
+import com.td.framework.ui.R;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -5,9 +5,9 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.td.framework.ui.R;
 import com.td.framework.ui.wheel.vertical.LoopView;
 import com.td.framework.ui.wheel.vertical.OnItemSelectedListener;
-import com.yida.cloud.ui.R;
 
 import java.util.ArrayList;
 import java.util.Calendar;

@@ -2,7 +2,7 @@ package com.td.framework.ui.adapter;
 
 
 import com.chad.library.adapter.base.loadmore.LoadMoreView;
-import com.yida.cloud.ui.R;
+import com.td.framework.ui.R;
 
 /**
  * 自定义的加载视图

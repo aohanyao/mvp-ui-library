@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.yida.cloud.ui.R;
+import com.td.framework.ui.R;
 
 import java.util.ArrayList;
 import java.util.List;
